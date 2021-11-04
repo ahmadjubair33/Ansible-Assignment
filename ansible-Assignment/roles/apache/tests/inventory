@@ -1,0 +1,4 @@
+localhost
+
+[demo]
+13.232.144.86 ansible_user=ubuntu

@@ -1,0 +1,9 @@
+- hosts: demo
+  become: yes
+      # archive: no
+      # checksum: yes
+      # recursive: yes
+      # delete: yes
+   # become: yes
+  roles:
+       - apache
