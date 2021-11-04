@@ -2,6 +2,9 @@
 - name: installing nginx
   apt:
     name: nginx
-    update_cache: yes
-    state: present
+    state: latest
+  changed_when: yes
+  notify: Restart NGINX
   become: yes
+
+  

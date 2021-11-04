@@ -1,0 +1,13 @@
+--- 
+- 
+  copy: 
+    dest: /var/www/html
+    src: files/page1/
+  name: "copy html pages  to host machine"
+  #when: "'13.126.209.147' in ansible_host"
+# - 
+#   copy: 
+#     dest: /var/www/html
+#     src: files/page2/
+#   when: "'13.234.110.243' in ansible_host"
+  

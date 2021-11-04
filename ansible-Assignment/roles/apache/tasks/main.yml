@@ -1,18 +1,12 @@
 ---
-# tasks file for roles/website
-- include: nginx-install.yml
-  notify: 
-    - Reload NGINX
 
-# - name: restart service
-#   service:
-#     name: nginx
-#     state: restarted
-#   become: yes
+- import_tasks: nginx-install.yml
+  tags: installing nginx
+  become: true
+- name: Flush handlers
+  meta: flush_handlers
 
- 
-- include: copy-wwebserver.yml
-- include: html-copy.yml
+- import_tasks: copy-webserver.yml
+- import_tasks: html-copy.yml
   
-  notify: 
-    - Reload NGINX
+  
